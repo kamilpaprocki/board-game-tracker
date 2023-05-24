@@ -15,7 +15,7 @@ public class BoardGamePlayer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "player_id")
     private String id;
-    @Column(table="player_nickname")
+    @Column(name = "player_nickname", unique = true)
     private String nickname;
     @ElementCollection
     @CollectionTable(name="boardgame_winnings", joinColumns = {@JoinColumn(name = "boardgame_id", referencedColumnName = "boardgame_id")})
