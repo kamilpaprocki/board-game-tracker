@@ -1,12 +1,10 @@
 package com.api.model.dao;
 
 import jakarta.persistence.*;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Builder
 @NoArgsConstructor
 @Entity
 @Table(name ="board_game")

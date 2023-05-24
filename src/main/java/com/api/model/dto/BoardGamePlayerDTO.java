@@ -7,7 +7,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Set;
+import java.util.Map;
 
 @Data
 @NoArgsConstructor
@@ -20,6 +20,6 @@ public class BoardGamePlayerDTO {
     @NotEmpty(message = "Player nickname cannot be null")
     private String nickname;
     @JsonProperty("boardGamesPlayed")
-    private Set<BoardGameDTO> boardGamesPlayed;
+    private Map<BoardGameDTO, Integer> boardGameWinnings;
 
 }
